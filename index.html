@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Functional Baap Er Bank</title>
+
+		<!-- Tailwind css CDN -->
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body>
+		<!-- Header Section Start -->
+		<header>
+			<h1 class="text-5xl text-center font-bold">
+				Functional <span class="text-purple-500">Baap Er Bank</span>
+			</h1>
+		</header>
+		<!-- Header Section End -->
+
+		<!-- Main Section Start -->
+		<main class="mt-12">
+			<!-- Balance Information Section Start -->
+			<section>
+				<div class="grid grid-cols-3 gap-4 w-3/4 mx-auto text-white">
+					<!-- Deposit Area Start -->
+					<div
+						class="bg-yellow-400 text-center p-8 rounded-xl hover:scale-105 duration-500"
+					>
+						<h4 class="text-2xl font-medium">Deposit</h4>
+						<h2 class="text-4xl font-semibold">
+							$<span id="deposit-total">00</span>
+						</h2>
+					</div>
+					<!-- Deposit Area End -->
+
+					<!-- Withdraw Area Start -->
+					<div
+						class="bg-red-400 text-center p-8 rounded-xl hover:scale-105 duration-500"
+					>
+						<h4 class="text-2xl font-medium">Withdraw</h4>
+						<h2 class="text-4xl font-semibold">
+							$<span id="withdraw-total">00</span>
+						</h2>
+					</div>
+					<!-- Withdraw Area End -->
+
+					<!-- Total Balance Area Start -->
+					<div
+						class="bg-blue-400 text-center p-8 rounded-xl hover:scale-105 duration-500"
+					>
+						<h4 class="text-2xl font-medium">Balance</h4>
+						<h2 class="text-4xl font-semibold">
+							$<span id="balance-total">1240</span>
+						</h2>
+					</div>
+					<!-- Total Balance Area End -->
+				</div>
+			</section>
+			<!-- Balance Information Area End -->
+
+			<!-- Deposit and Withdraw Section Start -->
+			<section class="mt-12 w-3/4 mx-auto">
+				<div class="grid grid-cols-2 gap-4">
+					<!-- Deposit Input Start -->
+					<div class="bg-violet-400 p-8 rounded-xl space-y-4">
+						<h3 class="text-3xl text-white">
+							Please Enter Deposit Amount
+						</h3>
+						<input
+							class="block w-10/12 p-2 rounded-lg"
+							type="number"
+							name="deposit-amount"
+							id="deposit-amount"
+							placeholder="$ Amount you want to deposit"
+						/>
+						<div class="flex justify-center items-center">
+							<button
+								id="btn-deposit"
+								class="bg-green-600 text-white px-10 py-2 rounded-xl hover:bg-green-300 duration-500"
+							>
+								Deposit
+							</button>
+						</div>
+					</div>
+					<!-- Deposit Input End -->
+
+					<!-- Withdraw Input Start -->
+					<div class="bg-orange-400 p-8 rounded-xl space-y-4">
+						<h3 class="text-3xl text-white">
+							Please Enter Withdraw Amount
+						</h3>
+						<input
+							class="block w-10/12 p-2 rounded-lg"
+							type="number"
+							name="withdraw-amount"
+							id="withdraw-amount"
+							placeholder="$ Amount you want to withdraw"
+						/>
+						<div class="flex justify-center items-center">
+							<button
+								id="btn-withdraw"
+								class="bg-green-600 text-white px-10 py-2 rounded-xl hover:bg-green-300 duration-500"
+							>
+								Withdraw
+							</button>
+						</div>
+					</div>
+					<!-- Withdraw Input End -->
+				</div>
+			</section>
+			<!-- Deposit and Withdraw Section End -->
+		</main>
+		<!-- Main Section End -->
+
+		<!-- JS Script -->
+		<script src="./script/utilities.js"></script>
+		<script src="./script/deposit.js"></script>
+		<script src="./script/withdraw.js"></script>
+	</body>
+</html>
